@@ -1,0 +1,10 @@
+<input type="number" [formControl]="hodnota" (change)="onChangeInput()"/>
+<div class="wrapper">
+  <div *ngFor="let box of boxes; let i = index" class="inside">
+    <label>{{ i }}</label>
+    <div class="boxes"><input type="checkbox" [(ngModel)]="boxes[i]" /></div>
+  </div>
+
+</div>
+
+
