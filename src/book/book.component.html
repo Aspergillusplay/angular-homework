@@ -1,1 +1,35 @@
-<p>book works!</p>
+<div class="container">
+  <div class="form-container">
+    <h1>Formulár na evidenciu knihy</h1>
+    <form [formGroup]="formular" (ngSubmit)="onSubmit()">
+
+      <label for="nazov">Názov:</label>
+      <input id="nazov" type="text" formControlName="nazov">
+      <br>
+
+      <label for="autor">Autor:</label>
+      <input id="autor" type="text" formControlName="autor">
+      <br>
+
+      <label for="rokVydania">Rok vydania:</label>
+      <input id="rokVydania" type="number" formControlName="rokVydania">
+      <br>
+
+      <button type="submit" [disabled]="!formular.valid">Odoslať</button>
+      <input type="button" (click)="nastavForm()" value="Nastav demo hodnoty">
+    </form>
+  </div>
+
+  <div class="list-container">
+    <h1>Zoznam kníh</h1>
+    <ul>
+      <li *ngFor="let kniha of knihy" class="book-item">
+        <img ngSrc="../assets/img/book.png" alt="Book Image" width="100" height="100">
+        <div>
+          <h2>{{ kniha.nazov }}</h2>
+          <p>Od {{ kniha.autor }} - {{ kniha.rokVydania }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
