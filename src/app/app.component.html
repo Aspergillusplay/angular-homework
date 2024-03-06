@@ -1,7 +1,8 @@
-<input type="number" [formControl]="hodnota" (change)="onChangeInput()"/>
-<div class="wrapper">
-    <div *ngFor="let box of boxes; let i = index" class="inside">
-        <label class="reverse">{{boxes.length - 1 - i}}</label>
-        <div class="boxes"><input type="checkbox" [checked]="box" (click)="onChangeCheckbox(i); $event.preventDefault()" /></div>
-    </div>
-</div>
+
+<a routerLink="/converter">Converter</a>
+&nbsp;|&nbsp;
+<a routerLink="/user">User</a>
+&nbsp;|&nbsp;
+<a routerLink="/book">Book</a>
+<router-outlet />
+
