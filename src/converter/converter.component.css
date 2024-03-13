@@ -1,10 +1,45 @@
-.wrapper {
-  display: flex;
-}
-.inside {
-  margin-right: 4px;
-  margin-top: 4px;
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  width: 220px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.inside {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inside label {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.inside input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input[type="number"] {
+  display: block;
+  width: 200px;
+  height: 35px;
+  padding: 5px 10px;
+  margin: 0 auto 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

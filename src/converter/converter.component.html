@@ -1,11 +1,9 @@
-<br/>
-<br/>
-<input type="number" [formControl]="hodnota" (change)="onChangeInput()"/>
-<div class="wrapper">
-  <div *ngFor="let box of boxes; let i = index" class="inside">
-    <label class="reverse">{{boxes.length - 1 - i}}</label>
-    <div class="boxes"><input type="checkbox" [checked]="box" (click)="onChangeCheckbox(i); $event.preventDefault()" /></div>
+<div class="main-container">
+  <input type="number" [formControl]="hodnota" (change)="onChangeInput()"/>
+  <div class="wrapper">
+    <div *ngFor="let box of boxes; let i = index" class="inside">
+      <label class="reverse">{{boxes.length - 1 - i}}</label>
+      <div class="boxes"><input type="checkbox" [checked]="box" (click)="onChangeCheckbox(i); $event.preventDefault()" /></div>
+    </div>
   </div>
 </div>
-<br/>
-
