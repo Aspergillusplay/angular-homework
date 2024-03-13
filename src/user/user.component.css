@@ -36,12 +36,11 @@ button[type="submit"]:disabled, input[type="button"]:disabled {
   cursor: not-allowed;
 }
 
-
 .container {
   display: flex;
   justify-content: space-between;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.25); /* Увеличиваем тень для более выраженных граней */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); /* Увеличиваем тень для более выраженных граней */
   overflow: hidden;
 }
 
