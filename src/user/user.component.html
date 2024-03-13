@@ -1,39 +1,31 @@
 <div class="container">
   <div class="form-container">
     <h1>User form</h1>
-    <form [formGroup]="formular" (ngSubmit)="onSubmit()">
+    <form (ngSubmit)="onSubmit()" [formGroup]="formular">
 
-  <label for="meno">Meno:</label>
-  <input id="meno" type="text" formControlName="meno">
-  <br>
+      <label for="firstName">Meno:</label>
+      <input formControlName="firstName" id="firstName" type="text">
+      <br>
 
-  <label for="priezvisko">Priezvisko:</label>
-  <input id="priezvisko" type="text" formControlName="priezvisko">
-  <br>
+      <label for="lastName">Priezvisko:</label>
+      <input formControlName="lastName" id="lastName" type="text">
+      <br>
 
-  <div formGroupName="adresa">
-    <label for="ulica">Ulica:</label>
-    <input id="ulica" type="text" formControlName="ulica">
-    <br>
+      <label for="email">Email:</label>
+      <input formControlName="email" id="email" type="text">
+      <br>
 
-    <label for="mesto">Mesto:</label>
-    <input id="mesto" type="text" formControlName="mesto">
-    <br>
-  </div>
-
-  <button type="submit" [disabled]="!formular.valid">odosli</button>
-  <input type="button" (click)="nastavForm()" value="nastav demo hodnoty">
+      <button [disabled]="!formular.valid" type="submit">odosli</button>
+      <input (click)="nastavForm()" type="button" value="nastav demo hodnoty">
     </form>
   </div>
-
 
   <div class="list-container">
     <h1>Zoznam zákazníkov</h1>
     <ul>
       <li *ngFor="let zakaznik of zakaznici">
-        {{ zakaznik.meno }} {{ zakaznik.priezvisko }} - {{ zakaznik.adresa.ulica }}, {{ zakaznik.adresa.mesto }}
+        {{ zakaznik.firstName }} {{ zakaznik.lastName }} - {{ zakaznik.email }}
       </li>
     </ul>
   </div>
-
 </div>
